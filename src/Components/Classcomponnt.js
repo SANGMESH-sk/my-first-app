@@ -1,9 +1,23 @@
 import React from 'react';
 
 
+
 export class Newclass extends React.Component{
     render(){
-        return <h1>this is class component</h1>;
+        return(
+          <div>
+            
+            {/* <Link to="Weather">Signup page</Link>  */}
+              
+          
+              
+            
+          </div>
+
+   
+       
+        );
+
     }
 }
 export default Newclass;

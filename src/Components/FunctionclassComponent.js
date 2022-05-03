@@ -1,16 +1,16 @@
 import React from "react";
 
+
 function Newfunc()
 {
-    return <h1>nested component is function component</h1>;
+    return (
+        <div>
+            <h1>good morning</h1>
+             
+        </div>
+    );
 }
 
-export class HiComp extends React.Component
-{
-    render()
-    {
-        return <h1>this is nested class component <Newfunc/></h1>;
-    }
-}
 
-export default HiComp;
+
+export default Newfunc;

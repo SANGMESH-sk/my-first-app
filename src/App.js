@@ -5,22 +5,50 @@ import FunctionclassComponent from './Components/FunctionclassComponent';
 import Emp from './Data/Employee.json';
 import ClassComponent from './Components/Classcomponnt';
 import WeatherApp from './Components/WeatherApp';
+import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+import NavbarFunction from './Components/Navbar';
+import Textform from './Components/Textform';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
+       <NavbarFunction title="TextUtils" />
+       <div className='container'>
+      
 
-      <WeatherApp />
-      <FunctionComponent />
-      <FunctionclassComponent />
+       </div>
+     
       <ClassComponent />
-      <Display/>
+     
+     
+      <div >
+        
+         <Routes>
+           <Route path="/Weather" element={ <WeatherApp />}/>
+           <Route path="/Display" element={  <Display  />}/>
+           <Route path="/textform" element={     <Textform heading="enter your Component"/>  }/>
+           <Route path="/counter" element={       <FunctionComponent />}/>
+      
+
+    
+          
+         </Routes>
+        
+        
+    
+
+       
+      </div>
     </div>
   );
   function Display() {
     const Display = Emp.map(
-      (record) => {
+      (record,i) => {
         return (
+        
           <tr>
             <td>{record.id}</td>
             <td><img src={record.path} width="60" height="70" /></td>
@@ -29,6 +57,7 @@ function App() {
             <td>{record.title}</td>
             <td>{record.salary}</td>
           </tr>
+        
         )
       }
     )
@@ -46,7 +75,7 @@ function App() {
               <th scope="col">salary</th>
             </tr>
           </thead>
-          <tbody class="table table-light">
+          <tbody className="table table-light">
             {Display}
           </tbody>
         </table>

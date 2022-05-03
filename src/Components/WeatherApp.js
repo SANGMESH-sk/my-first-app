@@ -17,17 +17,15 @@ const  WeatherApp=()=>{
         fetchApi();
     },[search])
     const getWeather = () =>{
-     
-
     }
     return(
         <div>
+            <center>
              <h1>hello wether api</h1>
             <div className='box'>
            
             <input type="search" name="" value={search} placeholder='search city' onChange={change}/>
             <button className='btn btn-success' onClick={getWeather}>search</button>
-      
             {
                 !data ? (
                     <p>no data found</p>
@@ -37,8 +35,7 @@ const  WeatherApp=()=>{
             }
             <h1>5.25 cel</h1>
             </div>
-           
-            
+            </center>
         </div>
         
     )
